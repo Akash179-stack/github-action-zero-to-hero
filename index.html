@@ -4,22 +4,221 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Akash Gupta | Cloud & DevOps Engineer</title>
-
-<link rel="stylesheet" href="style.css">
+<title>Akash Gupta | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#00f7ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00f7ff;
+}
+
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero span{
+color:#00f7ff;
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.btn{
+background:#00f7ff;
+color:black;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+margin-right:10px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.btn-outline{
+border:1px solid white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
+
+
+/* SECTIONS */
+
+section{
+padding:120px 80px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+
+/* GLASSMORPHISM */
+
+.glass{
+background:rgba(255,255,255,0.1);
+border-radius:15px;
+padding:30px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill{
+text-align:center;
+padding:20px;
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-10px) scale(1.05);
+background:rgba(0,247,255,0.2);
+}
+
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.project{
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-15px) scale(1.03);
+}
+
+
+/* CONTACT */
+
+.contact{
+max-width:500px;
+margin:auto;
+text-align:center;
+}
+
+.socials a{
+display:inline-block;
+margin:10px;
+color:#00f7ff;
+text-decoration:none;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+opacity:.7;
+}
+
+
+/* ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<nav>
 
-<nav class="navbar">
-<h2 class="logo">Akash</h2>
+<h2>Akash</h2>
 
-<ul class="nav-links">
+<ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
@@ -29,24 +228,25 @@
 </nav>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
-<div class="hero-content glass">
+<div class="glass reveal">
 
-<h1>Hi, I'm <span>Akash Gupta</span></h1>
+<h1>Hi I'm <span>Akash Gupta</span></h1>
 
-<h3>Cloud | DevOps | Infrastructure Engineer</h3>
+<h3>Cloud & DevOps Engineer</h3>
 
 <p>
-B.Tech Computer Science student specializing in Cloud Technology
-with hands-on experience in AWS, Docker, Kubernetes and CI/CD.
+Passionate about cloud computing, automation and scalable infrastructure.
+Experienced with AWS, Docker, Kubernetes and CI/CD pipelines.
 </p>
 
 <div class="buttons">
+
 <a href="#projects" class="btn">View Projects</a>
-<a href="#contact" class="btn-outline">Contact Me</a>
+
+<a href="#contact" class="btn-outline">Contact</a>
+
 </div>
 
 </div>
@@ -54,24 +254,16 @@ with hands-on experience in AWS, Docker, Kubernetes and CI/CD.
 </section>
 
 
-
-<!-- ABOUT -->
 
 <section id="about">
 
-<div class="glass card">
+<div class="glass reveal">
 
-<h2>About Me</h2>
-
-<p>
-I'm a Cloud & DevOps enthusiast currently pursuing B.Tech in Computer
-Science Engineering with specialization in Cloud Technology and
-Information Security.
-</p>
+<h2 class="section-title">About Me</h2>
 
 <p>
-I enjoy building scalable cloud infrastructure, automating workflows,
-and working with technologies like Docker, Kubernetes, Jenkins and AWS.
+I am a Computer Science student specializing in Cloud Technology and Information Security.
+I enjoy building cloud infrastructure, automating deployments and working with DevOps tools.
 </p>
 
 </div>
@@ -79,71 +271,62 @@ and working with technologies like Docker, Kubernetes, Jenkins and AWS.
 </section>
 
 
-
-<!-- SKILLS -->
 
 <section id="skills">
 
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title">Skills</h2>
 
-<div class="skills-container">
+<div class="skills">
 
-<div class="glass skill">AWS</div>
-<div class="glass skill">Docker</div>
-<div class="glass skill">Kubernetes</div>
-<div class="glass skill">Jenkins</div>
-<div class="glass skill">Ansible</div>
-<div class="glass skill">Python</div>
-<div class="glass skill">Linux</div>
-<div class="glass skill">Git</div>
-<div class="glass skill">Prometheus</div>
-<div class="glass skill">Grafana</div>
+<div class="glass skill reveal">AWS</div>
+<div class="glass skill reveal">Docker</div>
+<div class="glass skill reveal">Kubernetes</div>
+<div class="glass skill reveal">Jenkins</div>
+<div class="glass skill reveal">Linux</div>
+<div class="glass skill reveal">Git</div>
+<div class="glass skill reveal">Python</div>
+<div class="glass skill reveal">Ansible</div>
+<div class="glass skill reveal">Prometheus</div>
+<div class="glass skill reveal">Grafana</div>
 
 </div>
 
 </section>
 
 
-
-<!-- PROJECTS -->
 
 <section id="projects">
 
 <h2 class="section-title">Projects</h2>
 
-<div class="projects-container">
+<div class="projects">
 
-<div class="glass project-card">
+<div class="glass project reveal">
 
-<h3>Cloud Infrastructure Automation</h3>
+<h3>Docker CI/CD Pipeline</h3>
 
 <p>
-Automated AWS EC2 and S3 provisioning using Ansible playbooks and
-Shell scripts reducing manual configuration.
+Automated container deployment using GitHub Actions, Docker and AWS.
 </p>
 
 </div>
 
+<div class="glass project reveal">
 
-<div class="glass project-card">
-
-<h3>Containerized Application Deployment</h3>
+<h3>Kubernetes Microservices</h3>
 
 <p>
-Built multi-service application using Docker, Kubernetes and
-implemented CI/CD pipeline using Jenkins.
+Deployed scalable microservices architecture using Kubernetes.
 </p>
 
 </div>
 
+<div class="glass project reveal">
 
-<div class="glass project-card">
-
-<h3>Monitoring Dashboard</h3>
+<h3>Monitoring Stack</h3>
 
 <p>
-Configured Prometheus and Grafana for system monitoring and
-real-time performance visualization.
+Implemented Prometheus + Grafana monitoring dashboard for cloud infrastructure.
 </p>
 
 </div>
@@ -154,27 +337,28 @@ real-time performance visualization.
 
 
 
-<!-- CONTACT -->
-
 <section id="contact">
 
-<div class="glass contact-card">
+<div class="glass contact reveal">
 
 <h2>Contact</h2>
 
 <p>Email: akashgupta31014@gmail.com</p>
+
 <p>Phone: +91 7897702279</p>
 
 <div class="socials">
 
-<a href="https://linkedin.com">LinkedIn</a>
-<a href="https://github.com">GitHub</a>
+<a href="#">LinkedIn</a>
+
+<a href="#">GitHub</a>
 
 </div>
 
 </div>
 
 </section>
+
 
 
 <footer>
@@ -184,7 +368,34 @@ real-time performance visualization.
 </footer>
 
 
-<script src="script.js"></script>
+
+<script>
+
+function reveal(){
+
+var reveals=document.querySelectorAll(".reveal")
+
+for(var i=0;i<reveals.length;i++){
+
+var windowHeight=window.innerHeight
+
+var elementTop=reveals[i].getBoundingClientRect().top
+
+var elementVisible=100
+
+if(elementTop<windowHeight-elementVisible){
+
+reveals[i].classList.add("active")
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal)
+
+</script>
 
 </body>
 </html>
