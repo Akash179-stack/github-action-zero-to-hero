@@ -10,7 +10,8 @@ jobs:
       - name: copy code
         run: echo "this is code copy step"
   build:
-   runs-on: ubuntu-latest
-   steps:
-     - name: build the code
-       run : echo "this is building the code stage"
+    needs: code
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code
+        run : echo "this is building the code stage"
