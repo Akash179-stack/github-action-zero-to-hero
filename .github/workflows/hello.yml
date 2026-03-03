@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: copy code
         run: echo "this is code copy step"
- build:
+  build:
    runs-on: ubuntu-latest
    steps:
      - name: build the code
