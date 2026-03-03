@@ -1,0 +1,17 @@
+name: devops
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copy code
+        run: echo "this is code copy step"
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: build the code
+       run : echo "this is building the code stage"
