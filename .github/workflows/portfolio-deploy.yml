@@ -1,1 +1,23 @@
+name: portfolio
 
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubutnu:latestt
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+      
+      - name: setup the pages
+        uses: actions/configure-pages@4
+
+      - name: static code artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+        
+
+      - name: deploy or go live
+        uses: actions/deploy-pages@v4
