@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubutnu:latestt
+    runs-on: ubutnu-latest
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
@@ -20,4 +20,5 @@ jobs:
         
 
       - name: deploy or go live
+
         uses: actions/deploy-pages@v4
