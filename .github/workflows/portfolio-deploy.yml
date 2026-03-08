@@ -12,6 +12,7 @@ jobs:
   deploy:
     runs-on: ${{matrix.os}}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest,window-latest,macos-latest]
         
@@ -33,6 +34,7 @@ jobs:
       - name: deploy or go live
 
         uses: actions/deploy-pages@v4
+
 
 
 
