@@ -10,8 +10,11 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest,window-latest,macos-latest]
+        
     environment: github-pages
     
     steps:
@@ -30,6 +33,7 @@ jobs:
       - name: deploy or go live
 
         uses: actions/deploy-pages@v4
+
 
 
 
